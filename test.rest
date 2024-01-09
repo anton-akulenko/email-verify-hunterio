@@ -1,0 +1,52 @@
+
+#### emails for verification
+
+curl -X POST -H "Content-Type: application/json" -d '{"email": "website@work.ua"}' http://127.0.0.1:5000/verify-email
+
+#####
+
+curl -X POST -H "Content-Type: application/json" -d '{"email": "magic@djinni.co"}' http://127.0.0.1:5000/verify-email
+
+######
+
+curl -X POST -H "Content-Type: application/json" -d '{"email": "support@google.com"}' http://127.0.0.1:5000/verify-email
+
+######
+
+curl -X POST -H "Content-Type: application/json" -d '{"email": "example@example.com"}' http://127.0.0.1:5000/verify-email
+
+
+###### results read all
+
+curl http://127.0.0.1:5000/email-results
+
+
+
+##### results read one before update
+
+curl http://127.0.0.1:5000/email-results/example@example.com
+
+
+########## update
+
+curl -X PUT -H "Content-Type: application/json" -d '{"status": "verified"}' http://127.0.0.1:5000/email-results/example@example.com
+
+#####  read updated
+
+curl http://127.0.0.1:5000/email-results/example@example.com
+
+#### delete 
+curl -X DELETE http://127.0.0.1:5000/email-results/example@example.com
+
+
+####
+curl -X GET -H "Content-Type: application/json" -d '{"domain": "google.com"}' http://127.0.0.1:5000/domain-count-result
+
+####
+curl -X GET -H "Content-Type: application/json" -d '{"domain": "microsoft.com"}' http://127.0.0.1:5000/domain-count-result
+
+
+
+####
+curl http://127.0.0.1:5000/domain-results
+
