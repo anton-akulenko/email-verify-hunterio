@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-API_KEY: str = '93072a33112358841b7225e00dd324382226106b'
+API_KEY: str = 'your API key here'
 BASE_URL: str = 'https://api.hunter.io/v2/'
 
 # local var for results
